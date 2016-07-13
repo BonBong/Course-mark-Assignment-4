@@ -1,0 +1,64 @@
+---
+title: "Assignment 4"
+author: "Bongani Mveng"
+date: "11 July 2016"
+output: pdf_document
+---
+
+##Hello Octocat
+
+I love Octocat. She's the coolest cat in town. 
+
+![](C:\Users\BonGanI_2\Pictures\octocat.png)
+
+```{r quick_look, echo = TRUE}
+data(anscombe)
+dim(anscombe)
+colnames(anscombe)
+head(anscombe)
+tail(anscombe)
+summary(anscombe)
+```
+
+```{r xy_plot, echo = FALSE}
+#knitr chunk options
+knitr::opts_chunk$set(fig.width = 8,
+                      fig.height = 8,
+                      fig.align = "center",
+                      fig.path ='./figures/',
+                      dev = 'svg')
+data("anscombe")
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+anscombe.nu <- select(anscombe, x1, y1)
+anscombe.nu
+plot(anscombe.nu$y1~anscombe.nu$x1,
+     main = "Anscombe Scatterplot",
+     xlab = "x1",
+     ylab = "y1",
+     ylim = c(3,12),
+     xlim = c(3, 15),
+     pch = 24)
+abline(lm(y1~x1, data = anscombe), col = "green")
+```
+
+```{r data_import, echo = TRUE}
+library(readr)
+df <- read.csv("analgesic.csv")
+```
+
+```{r data_summary, echo = TRUE}
+dim(df)
+colnames(df)
+head(df)
+tail(df)
+summary(df)
+```
+
+```{r data_tidy, echo = TRUE}
+library(tidyr)
+library(dplyr)
+
+```
+
