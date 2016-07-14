@@ -59,6 +59,14 @@ summary(df)
 ```{r data_tidy, echo = TRUE}
 library(tidyr)
 library(dplyr)
+#Tidy the data from a wide to a long format
+df.new <- gather(df, Replicate_reading, Measurement, Measurement_1:Measurement_3)
+
+grouped <- group_by(df.new, ID, Replicate_reading, Measurement)
+grouped
+grouped.2 <- group_by(grouped, ID)
+grouped.2
+summarize(grouped.2, mean(Measurement))
 
 ```
 

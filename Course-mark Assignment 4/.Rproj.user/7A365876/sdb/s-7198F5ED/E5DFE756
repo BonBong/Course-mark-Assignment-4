@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(swirl)\nswirl()\nB\n1\ngather(students, count, -grade)\ngather(cran, students, sex, count, -grade\nlibrary(swirl)\nswirl()\nB\n1\nlibrary(swirl)\n0\n2\nlibrary(swi\ninstall_from_swirl(\"Getting and Cleaning Data\")\nswirl()\nb\n2\ninstall_from_swirl(\"Getting and Cleaning Data\")\n \n",
+    "created" : 1468370763077.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "652818628",
+    "id" : "E5DFE756",
+    "lastKnownWriteTime" : 1468392919,
+    "last_content_update" : 1468392919545,
+    "path" : "~/STATS STUFF/Practise/Lecture 2 Tidying data/Tidy Data Notes/Swirl tut.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
