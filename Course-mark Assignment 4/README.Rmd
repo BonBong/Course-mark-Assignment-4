@@ -9,7 +9,7 @@ output: pdf_document
 
 I love Octocat. She's the coolest cat in town. 
 
-![](C:\Users\BonGanI_2\Pictures\octocat.png)
+![Octocat](C:\Users\BonGanI_2\Pictures\octocat.png)
 
 ```{r quick_look, echo = TRUE}
 data(anscombe)
@@ -25,7 +25,7 @@ summary(anscombe)
 knitr::opts_chunk$set(fig.width = 8,
                       fig.height = 8,
                       fig.align = "center",
-                      fig.path ='./figures/',
+                      fig.path ='C:/Users/BonganI_2/Documents/STATS STUFF/Course-mark Assignment 3/ 3/figures',
                       dev = 'svg')
 data("anscombe")
 library(tidyr)
@@ -59,14 +59,21 @@ summary(df)
 ```{r data_tidy, echo = TRUE}
 library(tidyr)
 library(dplyr)
-#Tidy the data from a wide to a long format
-df.new <- gather(df, Replicate_reading, Measurement, Measurement_1:Measurement_3)
+# Tidy the data from a wide to long format 
+df.new <- gather(df, Replicate_reading, Measurement, Measurement_1:Measurement_3) 
 
-grouped <- group_by(df.new, ID, Replicate_reading, Measurement)
+# Group by the 'Group' column ("Analgesic", "Placebo")
+grouped <- group_by(df.new, Group) 
 grouped
-grouped.2 <- group_by(grouped, ID)
-grouped.2
-summarize(grouped.2, mean(Measurement))
 
+# Group by the 'ID' column
+grouped.2 <- group_by(grouped, ID)  
+grouped.2
+
+# Get the mean for every individual's ("ID") measurements
+sum <- summarize(grouped.2, mean(Measurement)) 
+
+# Print the final dataframe
+sum
 ```
 
