@@ -8,7 +8,7 @@ Hello Octocat
 
 I love Octocat. She's the coolest cat in town.
 
-![Octocat](C:\Users\BonGanI_2\Pictures\octocat.png)
+![Octocat](https://dl.dropboxusercontent.com/u/11805474/painblogr/biostats/images/octocat.png)
 
 ``` r
 data(anscombe)
