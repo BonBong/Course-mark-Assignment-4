@@ -90,7 +90,7 @@ summary(anscombe)
     ## 10  7  4.82
     ## 11  5  5.68
 
-![](README_files/figure-markdown_github/xy_plot-1.png)
+<img src="./figures.xy_plot-1.svg" style="display: block; margin: auto;" />
 
 ``` r
 library(readr)
